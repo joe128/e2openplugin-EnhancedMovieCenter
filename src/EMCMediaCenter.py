@@ -573,7 +573,6 @@ class EMCMediaCenter( CutList, Screen, HelpableScreen, InfoBarSupport ):
 				desc = audioInfo.getDescription()
 				trackList += [str(lang) + " " + str(desc)]
 			for audiolang in [config.EMC.audlang1.value, config.EMC.audlang2.value, config.EMC.audlang3.value]:
-				# Joe Debug
 				if self.tryAudioEnable(trackList, audiolang, tracks): break
 		except Exception, e:
 			emcDebugOut("[EMCPlayer] audioTrack exception:\n" + str(e))
